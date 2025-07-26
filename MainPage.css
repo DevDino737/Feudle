@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font: size 36px;
+}
+
+
+#nextRoundBtn {
+    background-color: #4e4d4d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px; 
+}
+
+#nextRoundBtn:hover {
+    background-color: #bbb; 
+    border-radius: 10px; 
+}
+
+#guessInput {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#guessBox:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+#guessBox {
+    color: #333; /* Text color */
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: text;
+    background-color: #333;
+    border-color: #ffffff;
+    border-radius: 5px;
+
+    
+}
+
+#guessInput:disabled {
+    background-color: #BBB; 
+    border-radius: 15px; 
+    cursor: not-allowed; 
+}
+
+
+/* Tile feedback boxes */
+#tileBoard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .tile {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .correct {
+    background-color: green;
+  }
+  
+  .close {
+    background-color: rgb(255, 0, 0);
+  }
+  
+  .wrong {
+    background-color: gray;
+  }
+  
+  /* Guess results list */
+  #results {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #results li {
+    font-size: 18px;
+    margin-top: 5px;
+    color: white;
+  }
+  
+
+  .grid {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .grid-box {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #1b1919;
+    color: white;
+  }
+  
