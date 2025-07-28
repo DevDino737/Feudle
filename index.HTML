@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feudle</title>
+    <link rel="stylesheet" href="MainPage.css">
+</head>
+<body>
+    
+   
+    <hr>
+    <button id="nextRoundBtn">Next Round</button>
+    <!-- ✅ Form wraps the input correctly -->
+    <form id="guessForm" autocomplete="on">
+        <input id="guessBox" type="text" placeholder="Type your guess...">
+    </form>
+
+    <section class="section" id="Feudle">
+        <div class="content">
+          <h2>Feudle Game</h2>
+          <p>Guess the word!</p>
+          <div id="grid" class="grid"></div>
+        </div>
+      </section>
+      
+      <!-- Link to your JavaScript file at the bottom of body -->
+      <script src="Feudle.js"></script>
+    
+    
+    <!-- ✅ Where guesses will appear -->
+    <ul id="results"></ul>
+
+    
+    <!-- This is where the game grid will show -->
+    <div id="tileBoard" style="margin-top: 20px;"></div>
+
+
+    <!-- ✅ Random placeholder generator -->
+    <script>
+        const words = [
+            'how', 'what', 'why', 'can', 'should', 'best', 'top', 'most', 'is', 'are', 'do', 'does', 'did', 'where', 'when',
+            'which', 'who', 'will', 'would', 'could', 'might', 'can', 'shall', 'has', 'have', 'had', 'make', 'get', 'use',
+            'find', 'take', 'come', 'think', 'know', 'go', 'see', 'look', 'want', 'give', 'work', 'call', 'try', 'ask', 'need',
+            'feel', 'become', 'leave', 'put', 'mean', 'keep', 'let', 'begin', 'seem', 'help', 'talk', 'turn', 'start', 'show',
+            'hear', 'play', 'run', 'move', 'like', 'live', 'believe', 'hold', 'bring', 'happen', 'write', 'provide', 'sit',
+            'stand', 'lose', 'pay', 'meet', 'include', 'set', 'learn', 'change', 'lead', 'understand', 'watch', 'follow',
+            'stop', 'create', 'speak', 'read', 'allow', 'add', 'spend', 'grow', 'open', 'walk', 'win', 'offer', 'remember',
+            'love', 'consider', 'appear', 'buy', 'wait', 'serve', 'send', 'expect', 'build', 'stay', 'fall', 'cut', 'reach',
+            'kill', 'remain', 'I', 'you', 'he', 'she', 'it', 'we', 'they', 'his', 'her', 'its', 'us', 'him', 'them', 'my'
+        ];
+
+        function getRandomSeedPhrase() {
+            const length = Math.floor(Math.random() * 4) + 2; // Between 2–5 words
+            const seedWords = [];
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * words.length);
+                seedWords.push(words[randomIndex]);
+            }
+            return seedWords.join(' ');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const randomPhrase = getRandomSeedPhrase();
+            const inputBox = document.getElementById("guessBox");
+            inputBox.placeholder = randomPhrase;
+        });
+    </script>
+
+    <!-- Your JavaScript modules -->
+    <script type="module" src="game.js"></script>
+</body>
+</html>
