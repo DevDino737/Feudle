@@ -17,7 +17,7 @@ export function createGrid(wordLength, maxGuesses) {
         const tile = document.createElement('div');
         tile.classList.add('tile');
         tile.id = `box-${tileIndex}`;
-        tile.style.width = '40px';
+        tile.style.width = '45px';
         tile.style.height = '40px';
         tile.style.margin = '4px';
         tile.style.border = '2px solid #888';
