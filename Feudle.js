@@ -29,6 +29,4 @@ export function createGrid(wordLength, maxGuesses) {
 
     grid.appendChild(rowDiv);
   }
-}
-
-   
+}  
