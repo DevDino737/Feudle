@@ -1,5 +1,5 @@
 export function createGrid(wordLength, maxGuesses) {
-  const grid = document.getElementById('grid');
+  const grid = document.getElementById('tileBoard');
   grid.innerHTML = ''; // Clear previous grid
 
   for (let row = 0; row < maxGuesses; row++) {
