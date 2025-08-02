@@ -21,7 +21,7 @@ async function startNewRound() {
  guessBox.disabled = false;
  guessBox.focus();
  guessCount = 0;
- answer = await fetchAndDisplaySuggestions();
+ answer = 'apple';
  createGrid(answer.length, maxGuesses);
 
 
